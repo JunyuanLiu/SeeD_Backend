@@ -1,0 +1,23 @@
+{
+  "name": "seed_backend",
+  "version": "1.0.0",
+  "description": "Backend server for Seed",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/philackm/SeeD_Backend.git"
+  },
+  "author": "seed",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/philackm/SeeD_Backend/issues"
+  },
+  "homepage": "https://github.com/philackm/SeeD_Backend#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2"
+  }
+}

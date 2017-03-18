@@ -33,6 +33,53 @@ var appRouter = function(app) {
             res.send("{success : true}");
         });
     });
+
+
+
+
+
+
+
+
+
+
+
+    var results = function filter(param1, param2){
+            
+            var Seed = database.model("Seed");
+            
+            Seed.findAll({
+                 where: {
+                     latitude: {
+                        $lt: parseFloat(param1) - 10,                // id > 6
+                        $gt: parseFloat(param1) + 10               // id >= 6
+
+                 },
+                    longitude: {
+                        $lt: parseFloat(param2) - 10,               // id < 10
+                        $gt: parseFloat(param2) + 10
+                    }
+            //tag:{
+
+            //}
+                }
+          }).then(function(results){
+              return results;
+          });
+    };
+
+    app.post('/message/getarea', function(req, res) {
+
+        var Seed = database.model("Seed");
+
+        var latitude = req.body.latitude,
+            longitude = req.body.longitude,
+            note = req.body.note;
+    
+        res.json(results(latitude, longitude));
+});
+
+
 }
  
 module.exports = appRouter;

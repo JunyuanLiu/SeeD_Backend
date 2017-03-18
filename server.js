@@ -11,7 +11,7 @@ var routes = require("./routes/routes.js")(app);
 
 var Sequelize = require('sequelize');
 var sequelize = new Sequelize('seed_database', 'b1deb7f7316124', 'e639b44a', {
-  host: 'au-cdbr-azure-southeast-a.cloudapp.net:3306',
+  host: 'au-cdbr-azure-southeast-a.cloudapp.net',
   dialect: 'mssql',
   pool: {
     max: 5,
@@ -23,7 +23,7 @@ var sequelize = new Sequelize('seed_database', 'b1deb7f7316124', 'e639b44a', {
   }
 });
 
-
+/*
 var User = sequelize.define('user', {
   firstName: {
     type: Sequelize.STRING,
@@ -43,7 +43,7 @@ User.sync({force: true}).then(function () {
     lastName: 'Hancock'
   });
 });
-
+*/
 
 
 var server = app.listen(process.env.PORT || 1337, function () {

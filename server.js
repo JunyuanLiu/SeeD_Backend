@@ -9,6 +9,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 var routes = require("./routes/routes.js")(app);
  
 
+/*
 var Sequelize = require('sequelize');
 var sequelize = new Sequelize('seed_database', 'b1deb7f7316124', 'e639b44a', {
   host: 'au-cdbr-azure-southeast-a.cloudapp.net',
@@ -22,6 +23,7 @@ var sequelize = new Sequelize('seed_database', 'b1deb7f7316124', 'e639b44a', {
     encrypt: true
   }
 });
+*/
 
 /*
 var User = sequelize.define('user', {

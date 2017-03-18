@@ -4,7 +4,7 @@
   "description": "Backend server for Seed",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server"
   },
   "repository": {
     "type": "git",
@@ -18,9 +18,9 @@
   "homepage": "https://github.com/philackm/SeeD_Backend#readme",
   "dependencies": {
     "body-parser": "^1.17.1",
-    "express": "^4.15.2"
-  },
- "scripts": {
-    "start": "node server"
-  },
+    "express": "^4.15.2",
+    "mysql": "^2.13.0",
+    "sequelize": "^3.30.2",
+    "tedious": "^1.15.0"
+  }
 }

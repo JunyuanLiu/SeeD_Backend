@@ -31,6 +31,7 @@ var appRouter = function(app) {
                 note: note
             });
 
+            res.setHeader('Content-Type', 'application/json');
             res.send("{success : true}");
         });
     });

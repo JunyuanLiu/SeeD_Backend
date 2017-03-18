@@ -1,5 +1,7 @@
 var appRouter = function(app) {
 
+    // this is just an example
+    // need to move this to a better spot.
     var Sequelize = require('sequelize');
     var sequelize = new Sequelize('seed-db', 'teamseed@seeddb.database.windows.net', 'seed?1234', {
     host: 'seeddb.database.windows.net',
@@ -46,8 +48,16 @@ var appRouter = function(app) {
         
     });
 
-    app.get("/messages/", function(req, res) {
-        res.send("Here is a list of messages.");
+    app.post('/message/get', function(req, res) {
+        var lat = req.body.lat,
+            lon = req.body.lon,
+            message = req.body.message;
+
+        // here is where we would store in the database.
+
+        res.send("Message: " + String(message) + " at: " + String(lat) + "," + String(lon));
+
+        // this is where we would send back a json object with, message id, success/failure, etc.
     });
 }
  

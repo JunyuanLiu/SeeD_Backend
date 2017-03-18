@@ -6,23 +6,23 @@ var appRouter = function(app) {
         var greeting = "Database reset."
 
         var Seed = database.model("Seed");
-            Seed.sync({force: true}).then(function () {
-                Seed.bulkCreate({
+    
+    Seed.sync({force: true}).then(function () {
+            Seed.create({
                 latitude: -37.800166,
                 longitude: 144.963724,
                 note: "This is note number 1."
-            },
-            {
+            });
+            Seed.create({
                 latitude: -37.799547,
                 longitude: 144.964427,
                 note: "This is note number 2."
-            },
-            {
+            });
+            Seed.create({
                 latitude: -37.800615,
                 longitude: 144.963654,
                 note: "This is not number 3."
-            }
-            )
+            });
         });
         
         res.send(greeting);
@@ -45,7 +45,7 @@ var appRouter = function(app) {
             longitude = req.body.longitude,
             note = req.body.note;
 
-        Seed.sync({force: true}).then(function () {
+        Seed.sync().then(function () {
             Seed.create({
                 latitude: latitude,
                 longitude: longitude,

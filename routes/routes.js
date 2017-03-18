@@ -11,6 +11,7 @@ var appRouter = function(app) {
         var Seed = database.model("Seed");
         
         Seed.findAll().then(function(seeds) {
+            res.setHeader('Content-Type', 'application/json');
             res.json(seeds);
         });
     });

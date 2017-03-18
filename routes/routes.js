@@ -11,7 +11,8 @@ var appRouter = function(app) {
                 latitude: -37.800166,
                 longitude: 144.963724,
                 note: "This is note number 1."
-            },{
+            },
+            {
                 latitude: -37.799547,
                 longitude: 144.964427,
                 note: "This is note number 2."
@@ -20,7 +21,7 @@ var appRouter = function(app) {
                 latitude: -37.800615,
                 longitude: 144.963654,
                 note: "This is not number 3."
-            },
+            }
             )
         });
         
